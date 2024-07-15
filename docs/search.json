@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "hw1",
+    "section": "",
+    "text": "import pandas as pd\n\ndf=pd.DataFrame({\n                    \"제품\":[\"사과\",'딸기','수박'],\n                    \"가격\":[1800,1500,3000],\n                    \"판매량\":[24,38,13]\n})\n\ndf[\"제품\"]\n\n0    사과\n1    딸기\n2    수박\nName: 제품, dtype: object"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "hw1",
+    "section": "",
+    "text": "import pandas as pd\n\ndf=pd.DataFrame({\n                    \"제품\":[\"사과\",'딸기','수박'],\n                    \"가격\":[1800,1500,3000],\n                    \"판매량\":[24,38,13]\n})\n\ndf[\"제품\"]\n\n0    사과\n1    딸기\n2    수박\nName: 제품, dtype: object"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n2"
+  }
+]
