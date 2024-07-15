@@ -3,34 +3,73 @@ title: "hw1"
 jupyter: python3
 ---
 
-# 84p 
+# 84p 1번
 
 ```{python}
 import pandas as pd
 import numpy as np
+#1
 df=pd.DataFrame({
                     "제품":["사과",'딸기','수박'],
                     "가격":[1800,1500,3000],
                     "판매량":[24,38,13]
 })
-
+df
+#2
 sum(df["가격"])/3
 np.mean(df["판매량"])
 
 ```
+
+
+
 # 115P
 
 
 ```{python}
 import pandas as pd
 import numpy as np
+#1
 mpg=pd.read_csv('data/mpg.csv')
 
 
 mpg_c=mpg.copy()
+#2
+mpg_c=mpg_c.rename(columns={"cty" : "city"})
+mpg_c=mpg_c.rename(columns={"hwy" : "highway"})
+#3
 mpg_c
 
-
+```
+# 130P
+```{python}
+import pandas as pd
+import numpy as np
+#1
+mid=pd.read_csv('data/midwest.csv')
+mid.head()
+mid.tail()
+mid.shape
+mid.info()
+mid.describe()
+mid
+#2
+mid=mid.rename(columns = {"poptotal":"total"})
+mid=mid.rename(columns = {"popasian":"asian"})
+mid
+#3
+mid["100asian"]=mid["asian"]/mid["total"]*100
+mid["100asian"].plot.hist()
+import matplotlib.pyplot as plt # 도표로 보여주게 하기위해서 추가한것 클린하는법은 plt.clf()
+plt.show() # 도표로 보여주게 하기위해서 추가한것 
+plt.clf()
+#4
+mean=np.mean(mid["100asian"])
+mid["compare"] = np.where(mid["100asian"]>mean,"large","small")
+#5
+com=mid["compare"].value_counts()
+com.plot.bar()
+plt.show()
 
 
 ```
