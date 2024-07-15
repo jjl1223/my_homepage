@@ -38,6 +38,7 @@ mpg_c=mpg.copy()
 mpg_c=mpg_c.rename(columns={"cty" : "city"})
 mpg_c=mpg_c.rename(columns={"hwy" : "highway"})
 #3
+mpg_c.head
 mpg_c
 
 ```
