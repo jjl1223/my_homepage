@@ -3,21 +3,35 @@ title: "hw1"
 jupyter: python3
 ---
 
-##
+# 84p 
 
 ```{python}
 import pandas as pd
-
+import numpy as np
 df=pd.DataFrame({
                     "제품":["사과",'딸기','수박'],
                     "가격":[1800,1500,3000],
                     "판매량":[24,38,13]
 })
 
-df["제품"]
+sum(df["가격"])/3
+np.mean(df["판매량"])
 
 ```
+# 115P
+
+
 ```{python}
+import pandas as pd
+import numpy as np
+mpg=pd.read_csv('data/mpg.csv')
+
+
+mpg_c=mpg.copy()
+mpg_c
+
+
+
 
 ```
 

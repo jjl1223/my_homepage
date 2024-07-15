@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "hw1",
     "section": "",
-    "text": "import pandas as pd\n\ndf=pd.DataFrame({\n                    \"제품\":[\"사과\",'딸기','수박'],\n                    \"가격\":[1800,1500,3000],\n                    \"판매량\":[24,38,13]\n})\n\ndf[\"제품\"]\n\n0    사과\n1    딸기\n2    수박\nName: 제품, dtype: object"
+    "text": "84p\n\nimport pandas as pd\nimport numpy as np\ndf=pd.DataFrame({\n                    \"제품\":[\"사과\",'딸기','수박'],\n                    \"가격\":[1800,1500,3000],\n                    \"판매량\":[24,38,13]\n})\n\nsum(df[\"가격\"])/3\nnp.mean(df[\"판매량\"])\n\nnp.float64(25.0)\n\n\n\n\n115P\n\nimport pandas as pd\nimport numpy as np\nmpg=pd.read_csv('data/mpg.csv')\n\n\nmpg_c=mpg.copy()\nmpg_c\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns"
   },
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
     "title": "hw1",
     "section": "",
-    "text": "import pandas as pd\n\ndf=pd.DataFrame({\n                    \"제품\":[\"사과\",'딸기','수박'],\n                    \"가격\":[1800,1500,3000],\n                    \"판매량\":[24,38,13]\n})\n\ndf[\"제품\"]\n\n0    사과\n1    딸기\n2    수박\nName: 제품, dtype: object"
+    "text": "import pandas as pd\nimport numpy as np\ndf=pd.DataFrame({\n                    \"제품\":[\"사과\",'딸기','수박'],\n                    \"가격\":[1800,1500,3000],\n                    \"판매량\":[24,38,13]\n})\n\nsum(df[\"가격\"])/3\nnp.mean(df[\"판매량\"])\n\nnp.float64(25.0)"
   },
   {
     "objectID": "about.html",
