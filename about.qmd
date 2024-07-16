@@ -5,7 +5,7 @@ toc: false
 about: 
     id: hero-heading
     template: jolla
-    image: eagles.png
+    image: sudal.jpg
     links:
         - icon: github
           text: github
