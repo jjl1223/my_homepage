@@ -8,8 +8,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - hw1.qmd
-
+      - href: HW2.qmd
+        text: HW2
 format:
   html:
     theme: cosmo

@@ -1,0 +1,82 @@
+---
+title: "HW2"
+jupyter: python3
+---
+##144p #1
+```{python}
+import pandas as pd
+import numpy as np    
+df=pd.read_csv("data/mpg.csv")
+df.head
+df["displ"] #데이터뽑기
+low=df.query("displ<=4") #정해진 데이터 뽑기 안됨 조건문만 가능
+high=df.query("displ>=5")
+
+high["hwy"]
+print(np.mean(low["hwy"]))
+print(np.mean(high["hwy"]))
+np.mean(low["hwy"])
+np.mean(low["hwy"]) >=np.mean(high["hwy"])
+
+
+```
+##144p #2
+```{python}
+import pandas as pd
+import numpy as np    
+df=pd.read_csv("data/mpg.csv")
+au=df.query('manufacturer == "audi"')
+to=df.query('manufacturer == "toyota"')
+au
+print(np.mean(au["cty"]))
+print(np.mean(to["cty"]))
+np.mean(au["cty"])>=np.mean(to["cty"])
+```
+144 #3 
+```{python}
+import pandas as pd
+import numpy as np    
+df=pd.read_csv("data/mpg.csv")
+car=df.query('manufacturer=="chevrolet"' and 'manufacturer == "ford"' and 'manufacturer == "honda"')
+
+np.mean(car["hwy"]) #아래까지 가능
+car["hwy"].mean()
+
+
+```
+#153
+```{python}
+import pandas as pd
+import numpy as np
+df=pd.read_csv("data/mpg.csv")
+au=df.query('manufacturer=="audi"')
+au=au.sort_values(['hwy'],ascending=[True])
+au.head(5)
+
+```
+
+
+
+##158p 
+```{python}
+import pandas as pd
+import numpy as np    
+df=pd.read_csv("data/mpg.csv")
+#1
+dfc=df.copy()
+dfc["add"]=dfc["cty"]+dfc["hwy"]
+print(dfc.head())
+#2
+dfc["mean"]=dfc["add"]/2
+#3
+dfc=dfc.sort_values(['mean'],ascending = [False])
+dfc.head(3)
+#4
+df = df.assign( add= lambda x: x["cty"]+x["hwy"],
+          mean= lambda x: x["add"]/2)\
+          .sort_values('mean',ascending =[False])\
+          .head()
+df    
+
+```
+
