@@ -1,6 +1,15 @@
 ---
 title: "About"
 jupyter: python3
+toc: false
+about: 
+    id: hero-heading
+    template: jolla
+    image: eagles.png
+    links:
+        - icon: github
+          text: github
+          href: https://github.com/jjl1223/my_homepage
 ---
 
 About this site
