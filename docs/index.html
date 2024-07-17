@@ -67,7 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -177,7 +176,6 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
-   
   <ul>
   <li><a href="#코드-청크-종류" id="toc-코드-청크-종류" class="nav-link active" data-scroll-target="#코드-청크-종류">코드 청크 종류</a></li>
   <li><a href="#실행가능한-코드청크" id="toc-실행가능한-코드청크" class="nav-link" data-scroll-target="#실행가능한-코드청크">실행가능한 코드청크</a></li>
@@ -193,48 +191,38 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-about-jolla content">
+  <img src="eagles.png" class="about-image
+  round " style="height: 15em; width: 15em;">
+ <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">나의 사이트</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-  
-    
   </div>
-  
-
-
-</header>
-
+</header><main class="content" id="quarto-document-content">
 
 <p>#파이썬 코드 청크 * 단축키: ctrl + Alt + I</p>
 <section id="코드-청크-종류" class="level3">
-<h3 class="anchored" data-anchor-id="코드-청크-종류">코드 청크 종류</h3>
+<h3 data-anchor-id="코드-청크-종류">코드 청크 종류</h3>
 <p>2가지 종류가 있음 1. 인라인 코드청크 : 백틱 하나로 묶음</p>
 <ol start="2" type="1">
 <li>디스플레이 코드청크 : 백틱(```)3개로 묶음</li>
 </ol>
 </section>
 <section id="실행가능한-코드청크" class="level3">
-<h3 class="anchored" data-anchor-id="실행가능한-코드청크">실행가능한 코드청크</h3>
+<h3 data-anchor-id="실행가능한-코드청크">실행가능한 코드청크</h3>
 <p>백틱 뒤에 <code>{python}</code>붙여주면 됨</p>
-<div id="c5cfc920" class="cell" data-execution_count="1">
+<div id="c2db2d3e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">%</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>0</code></pre>
 </div>
 </div>
 <p>##’코드 청크 실행 옵션</p>
 <p>옵션은 <code>#|</code> 시작함. <em><code>echo</code> 옵션: 코드를 문서에 보여줌 </em><code>eval</code> 옵션: 코드를 돌릴 것인가, 그냥 둘것인가를 결정</p>
-<div id="49db0a88" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div id="d8e59445" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>0</code></pre>
 </div>
 </div>
@@ -247,7 +235,7 @@ window.Quarto = {
 <p>## 이미지 넣는법 <a href="https://statisticsplaybook.com/">슬기로운 통계생활</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ObsidianOregon.jpg/360px-ObsidianOregon.jpg" class="img-fluid" alt="위키피디아 흑요석"> <img src="C:\Users\USER\Desktop\이재준\주석%202024-07-11%20114552.png" class="img-fluid" alt="저장된 사진"></p>
 </section>
 <section id="수식-입력-방버" class="level2">
-<h2 class="anchored" data-anchor-id="수식-입력-방버">수식 입력 방버</h2>
+<h2 data-anchor-id="수식-입력-방버">수식 입력 방버</h2>
 <ul>
 <li>인라인 수식: $ 하나로 감싸준다. (본문에 입력)</li>
 <li>디스플레이 수식: $ 두개로 감싸준다.(독립적인 문단)</li>
@@ -261,13 +249,13 @@ x^2+ y^2 = 5
 <section id="마크다운-1" class="level1">
 <h1>마크다운 1</h1>
 <section id="굵게" class="level2">
-<h2 class="anchored" data-anchor-id="굵게">굵게</h2>
+<h2 data-anchor-id="굵게">굵게</h2>
 <p><strong>랜더링 해줘~</strong> <strong>제발</strong></p>
 <section id="기울림-이탤릭" class="level3">
-<h3 class="anchored" data-anchor-id="기울림-이탤릭">기울림 이탤릭</h3>
+<h3 data-anchor-id="기울림-이탤릭">기울림 이탤릭</h3>
 <p><em>이탤릭</em> <em>기울림</em></p>
 <section id="취소선" class="level4">
-<h4 class="anchored" data-anchor-id="취소선">취소선</h4>
+<h4 data-anchor-id="취소선">취소선</h4>
 <p><del>제발 되게해줘</del></p>
 <ol type="1">
 <li><p>순서가있는 리스트</p></li>
@@ -288,9 +276,9 @@ x^2+ y^2 = 5
 <p>Anyone can learn anything -야야</p>
 </blockquote>
 <hr>
-<div id="c888d135" class="cell" data-execution_count="3">
+<div id="51db53be" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">%</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>0</code></pre>
 </div>
 </div>
@@ -302,8 +290,9 @@ x^2+ y^2 = 5
 </section>
 </section>
 </section>
-
-</main> <!-- /main -->
+</main>  
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -324,13 +313,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

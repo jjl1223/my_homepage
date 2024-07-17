@@ -2,7 +2,10 @@
 title: "나의 사이트"
 jupyter: python3
 authoor: "이재준"
-
+about: 
+        id: hero-heading
+        template: jolla
+        image: eagles.png
 
 ---
 
