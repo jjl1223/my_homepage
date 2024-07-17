@@ -1,6 +1,10 @@
 ---
-title: "HW2"
+title: "HW1"
+authoor: "이재준"
+date: "2024-0712"
 jupyter: python3
+categories: [bigdata]
+
 ---
 ##144p #1
 ```{python}

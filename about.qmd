@@ -15,5 +15,5 @@ about:
 About this site
 
 ```{python}
-1 + 1
+# 수달 야구 최고~
 ```
