@@ -1,5 +1,5 @@
 ---
-title: "HW1"
+title: "HW2"
 authoor: "이재준"
 date: "2024-0712"
 jupyter: python3
