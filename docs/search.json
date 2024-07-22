@@ -39,7 +39,7 @@
     "href": "blog.html",
     "title": "blog",
     "section": "",
-    "text": "교재 챕터8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\nNo matching items"
+    "text": "HW3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n교재 챕터8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/HW1/index.html",
@@ -117,5 +117,26 @@
     "title": "교재 챕터8",
     "section": "선그래프 319p",
     "text": "선그래프 319p\n\npx.line(mpg,x='model',y='year')"
+  },
+  {
+    "objectID": "posts/HW3/index.html",
+    "href": "posts/HW3/index.html",
+    "title": "HW3",
+    "section": "",
+    "text": "#1\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nmpg=pd.read_csv(\"data/mpg.csv\")\nsns.scatterplot(data=mpg,x='cty',y='hwy')\nplt.show()\nplt.clf()\n#2\nmidw=pd.read_csv(\"data/midwest.csv\")\nmidw.columns\nsns.scatterplot(data =midw,x='poptotal',y='popasian').set(xlim=[0,500000],ylim=[0,10000])\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#2\nmidw=pd.read_csv(\"data/midwest.csv\")\nmidw.columns\nsns.scatterplot(data =midw,x='poptotal',y='popasian').set(xlim=[0,500000],ylim=[0,10000])\nplt.show()"
+  },
+  {
+    "objectID": "posts/HW3/index.html#p",
+    "href": "posts/HW3/index.html#p",
+    "title": "HW3",
+    "section": "",
+    "text": "#1\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nmpg=pd.read_csv(\"data/mpg.csv\")\nsns.scatterplot(data=mpg,x='cty',y='hwy')\nplt.show()\nplt.clf()\n#2\nmidw=pd.read_csv(\"data/midwest.csv\")\nmidw.columns\nsns.scatterplot(data =midw,x='poptotal',y='popasian').set(xlim=[0,500000],ylim=[0,10000])\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#2\nmidw=pd.read_csv(\"data/midwest.csv\")\nmidw.columns\nsns.scatterplot(data =midw,x='poptotal',y='popasian').set(xlim=[0,500000],ylim=[0,10000])\nplt.show()"
+  },
+  {
+    "objectID": "posts/HW3/index.html#section",
+    "href": "posts/HW3/index.html#section",
+    "title": "HW3",
+    "section": "",
+    "text": "211p\n\n#1\ndf=mpg.query('category==\"suv\"')\\\n      .groupby('manufacturer',as_index=False)\\\n      .agg(mean_cty=(('cty','mean')))\\\n      .sort_values('mean_cty',ascending=False)\\\n      .head()\n      \nsns.barplot(data=df,x='manufacturer',y= 'mean_cty')\n\n\n\n\n\n\n\n\n\n#2\nimport seaborn as sns\ndf=mpg.groupby('category',as_index=False)\\\n      .agg(n=('category','count'))\\\n      .sort_values('n',ascending=False)\nsns.barplot(data=df,x='category',y='n')"
   }
 ]

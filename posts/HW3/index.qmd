@@ -1,0 +1,53 @@
+---
+title: "HW3"
+jupyter: python3
+---
+## 204p
+```{python}
+#1
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+mpg=pd.read_csv("data/mpg.csv")
+sns.scatterplot(data=mpg,x='cty',y='hwy')
+plt.show()
+plt.clf()
+#2
+midw=pd.read_csv("data/midwest.csv")
+midw.columns
+sns.scatterplot(data =midw,x='poptotal',y='popasian').set(xlim=[0,500000],ylim=[0,10000])
+plt.show()
+
+```
+```{python}
+#2
+midw=pd.read_csv("data/midwest.csv")
+midw.columns
+sns.scatterplot(data =midw,x='poptotal',y='popasian').set(xlim=[0,500000],ylim=[0,10000])
+plt.show()
+```
+
+##
+211p
+```{python}
+#1
+df=mpg.query('category=="suv"')\
+      .groupby('manufacturer',as_index=False)\
+      .agg(mean_cty=(('cty','mean')))\
+      .sort_values('mean_cty',ascending=False)\
+      .head()
+      
+sns.barplot(data=df,x='manufacturer',y= 'mean_cty')
+```
+
+```{python}
+#2
+import seaborn as sns
+df=mpg.groupby('category',as_index=False)\
+      .agg(n=('category','count'))\
+      .sort_values('n',ascending=False)
+sns.barplot(data=df,x='category',y='n')
+```
+
+
+
