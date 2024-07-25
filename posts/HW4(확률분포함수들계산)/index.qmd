@@ -43,19 +43,19 @@ plt.show()
 #3 P(x<3 or x>7)
 from scipy.stats import norm
 #1)
-norm.cdf(3,2,3**2)
+norm.cdf(3,2,3)
 
 ```
 
 ```{python}
 #2 P(2<x<5)
-norm.cdf(5,2,3**2)-norm.cdf(2,2,3**2)
+norm.cdf(5,2,3)-norm.cdf(2,2,3)
 
 ```
 
 ```{python}
 #3P(x<3 or x>7)
-1-(norm.cdf(7,2,3**2)-norm.cdf(3,2,3**2)) 
+1-(norm.cdf(7,2,3)-norm.cdf(3,2,3)) 
 ```
 
 
@@ -68,8 +68,8 @@ norm.cdf(5,2,3**2)-norm.cdf(2,2,3**2)
 
 0.05
 
-norm.cdf(36.5794,30,4) # 왼쪽에서부터 지정한값까지 나올 확률을 다 더해줌(면적)
-norm.ppf(0.95,30,4) # 상위 5% 즉 하위 95%값을 반환해줌 #정답
+norm.cdf(36.5794,30,2) # 왼쪽에서부터 지정한값까지 나올 확률을 다 더해줌(면적)
+norm.ppf(0.95,30,2) # 상위 5% 즉 하위 95%값을 반환해줌 #정답
 
 ```
 
