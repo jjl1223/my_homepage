@@ -53,6 +53,7 @@ about:
 ![위키피디아 흑요석](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ObsidianOregon.jpg/360px-ObsidianOregon.jpg)
 ![저장된 사진](C:\Users\USER\Desktop\이재준\주석 2024-07-11 114552)
 
+![사진](youn.png)
 ## 수식 입력 방버
 * 인라인 수식: $ 하나로 감싸준다. (본문에 입력)
 * 디스플레이 수식: $ 두개로 감싸준다.(독립적인 문단)
