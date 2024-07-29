@@ -1,0 +1,54 @@
+---
+title: "HW5"
+jupyter: python3
+---
+#균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
+
+#1.n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)
+#2.각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.
+
+```{python}
+#s_2분포
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import uniform
+s_2=[]
+s_1=[]
+for k in range(10000):
+    x=uniform.rvs(loc=3,scale=7,size=20)
+    x_mean=np.mean(x)
+    a= (x-x_mean)**2
+    aa= sum(a)
+    s2=(1/(len(x)-1)) *aa
+    s1=(1/(len(x))) *aa
+    s_2.append(s2)   
+    s_1.append(s1) 
+s_2    
+
+
+plt.hist(s_2, color = "blue")
+sss=uniform.rvs(loc=3,scale=7,size=20000)
+var=np.var(sss)
+#모분산 표현
+plt.axvline(x=var,color="green",linestyle='-',linewidth=2)
+plt.show()
+plt.clf()
+```
+
+```{python}
+#s_1분포
+plt.hist(s_1, color = "red")
+plt.axvline(x=var,color="green",linestyle='-',linewidth=2)
+plt.show()
+plt.clf()
+```
+
+
+#3.결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
+```{python}
+print(np.mean(s_2))
+print(np.mean(s_1))
+var
+```
+#표본평균의 평균을 내었을때 s_2가 실제 분산과 더 가까우므로 s_2를 쓰는것이 맞다
