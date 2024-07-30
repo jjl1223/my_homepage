@@ -16,7 +16,7 @@ from scipy.stats import uniform
 s_2=[]
 s_1=[]
 for k in range(10000):
-    x=uniform.rvs(loc=3,scale=7,size=20)
+    x=uniform.rvs(loc=3,scale=4,size=20)
     x_mean=np.mean(x)
     a= (x-x_mean)**2
     aa= sum(a)
@@ -28,7 +28,7 @@ s_2
 
 
 plt.hist(s_2, color = "blue")
-sss=uniform.rvs(loc=3,scale=7,size=20000)
+sss=uniform.rvs(loc=3,scale=4,size=20000)
 var=np.var(sss)
 #모분산 표현
 plt.axvline(x=var,color="green",linestyle='-',linewidth=2)
