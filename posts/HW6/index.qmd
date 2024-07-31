@@ -87,6 +87,29 @@ plt.axhline(y = male_b, color = 'brown', linestyle = '-', linewidth = 2)
 plt.show()
 plt.clf()
 ```
+```{python}
+welfare.dropna(subset="income").shape
+sex_income=welfare.dropna(subset="income") \
+       .groupby("sex",as_index=False) \
+       .agg(mean_income = ("income","mean"))
+sns.barplot(data=sex_income,x="sex",y="mean_income", hue="sex")
+plt.plot([-0.1, 0.1], [female_a, female_a], color='black')
+plt.plot([-0.1, 0.1], [female_b, female_b], color='black')
+
+plt.plot([0, 0], [female_a, female_b], color='black')
+plt.plot([1, 1], [male_a, male_b], color='black')
+
+plt.plot([0.9, 1.1], [male_a, male_a], color='black')
+plt.plot([0.9, 1.1], [male_b, male_b], color='black')
+plt.show()
+plt.clf()
+
+```
+
+
+
+
+
 ##신뢰구간 선이 겹쳐서 나오는 문제가 발생
 남자 여자 그래프 따로 그려서 보여주기
 ```{python}
