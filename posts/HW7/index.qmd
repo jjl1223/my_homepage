@@ -50,7 +50,8 @@ print("P_value는 ",p_value)
 ```{python}
 # 95%신뢰구간
 #t.ppf 하위 %값을 반환해줌 ex)t.ppf(0.975,df=s_n-1) 하위 97.5%까지의 값 즉 상위 2.5% 값을 반환해준다
-16 + t.ppf(0.975,df=s_n-1) *s_std / np.sqrt(s_n)
-16 - t.ppf(0.975,df=s_n-1) *np.std(s,ddof=1) / np.sqrt(s_n)
+a=16 + t.ppf(0.975,df=s_n-1) *s_std / np.sqrt(s_n)
+b=16 - t.ppf(0.975,df=s_n-1) *np.std(s,ddof=1) / np.sqrt(s_n)
+print("신뢰 구간은",b,"~",a,"이다")
 ```
 
