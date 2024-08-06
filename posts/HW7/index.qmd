@@ -33,14 +33,14 @@ s_mean=np.mean(s)
 s_std=np.std(s,ddof=1) # 표준편차 구할때는 n-1이므로 ddof=1로 해주기
 s_n=len(s)
 
-t_s=(16-s_mean)/(s_std/np.sqrt(s_n))
+t_s=(s_mean-16)/(s_std/np.sqrt(s_n))
 
 
 from scipy.stats import t
 
-p_value=1-t.cdf(t_s,df=s_n-1) #16이상이므로 단측 cdf t.cdf 왼쪽에서부터 지정한 값까지의 면적
+p_value=t.cdf(t_s,df=s_n-1) #16이상이므로 단측 cdf t.cdf 왼쪽에서부터 지정한 값까지의 면적
 print("P_value는 ",p_value)
-#0.957로 0.001보다 크므로 귀무가설을 체택한다
+#0.04276으로 0.001보다 크므로 귀무가설을 체택한다
 
 
 
