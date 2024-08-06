@@ -33,7 +33,7 @@ s_mean=np.mean(s)
 s_std=np.std(s,ddof=1) # 표준편차 구할때는 n-1이므로 ddof=1로 해주기
 s_n=len(s)
 
-t_s=(s_mean-16)/(s_std/np.sqrt(s_n))
+t_s=(16-s_mean)/(s_std/np.sqrt(s_n))
 
 
 from scipy.stats import t
