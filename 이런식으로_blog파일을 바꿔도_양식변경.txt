@@ -1,8 +1,15 @@
 ---
-title: "글 목록"
+title: "blog"
 listing:
     contents: posts
     sort: "date desc"
-    type: gird
+    type: grid
     categories: true
 ---
+
+
+
+
+
+#이거는 붙이지말고
+단 필터기능이랑 검색기능 등등은 안되고 양식기능만 가능
