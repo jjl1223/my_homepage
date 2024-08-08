@@ -39,7 +39,7 @@
     "href": "blog.html",
     "title": "blog",
     "section": "",
-    "text": "HW3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n교재 챕터8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHW3\n\n\n\n\n\n\n\n\n\n\n\nHW4\n\n\n\n\n\n\n\n\n\n\n\nHW5\n\n\n\n\n\n\n\n\n\n\n\nHW6\n\n\n\n\n\n\n\n\n\n\n\nHW7\n\n\n\n\n\n\n\n\n\n\n\n교재 챕터8\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/HW1/index.html",
@@ -166,5 +166,12 @@
     "title": "HW7",
     "section": "",
     "text": "슬통 자동자는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22 년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여 한다고 한다. 다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다. 15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804 표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정) 1. 𝑡 검정을 위한 가정체크를 진행하세요. 2. 검정을 위한 가설을 명확하게 서술하시오. 3. 검정통계량 계산하시오. 4. p‑value을 구하세요.\n\nfrom scipy.stats import norm\nimport pandas as pd\nimport seaborn as sns    \nimport matplotlib.pyplot as plt\nimport numpy as np    \n1-norm.cdf(18,loc=10,scale=1.96)\n# apd 57P문제\n#귀무가설: 현대자동차 에너지 소비효율은 16이상이다\ns=[15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927,\n15.382, 16.709, 16.804]\n\ns_mean=np.mean(s)\ns_std=np.std(s,ddof=1) # 표준편차 구할때는 n-1이므로 ddof=1로 해주기\ns_n=len(s)\n\nt_s=(s_mean-16)/(s_std/np.sqrt(s_n))\n\n\nfrom scipy.stats import t\n\np_value=t.cdf(t_s,df=s_n-1) #16이상이므로 단측 cdf t.cdf 왼쪽에서부터 지정한 값까지의 면적\nprint(\"P_value는 \",p_value)\n#0.04276으로 0.001보다 크므로 귀무가설을 체택한다\n\nP_value는  0.042762417664207845\n\n\n\n현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.\n\n\n# 95%신뢰구간\n#t.ppf 하위 %값을 반환해줌 ex)t.ppf(0.975,df=s_n-1) 하위 97.5%까지의 값 즉 상위 2.5% 값을 반환해준다\na=16 + t.ppf(0.975,df=s_n-1) *s_std / np.sqrt(s_n)\nb=16 - t.ppf(0.975,df=s_n-1) *np.std(s,ddof=1) / np.sqrt(s_n)\nprint(\"신뢰 구간은\",b,\"~\",a,\"이다\")\n\n신뢰 구간은 15.4571309070064 ~ 16.542869092993598 이다"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Recent posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHW3\n\n\n\n\n\n\n\n\n\n\n\nHW4\n\n\n\n\n\n\n\n\n\n\n\nHW5\n\n\n\n\n\n\n\n\n\n\n\nHW6\n\n\n\n\n\n\n\n\n\n\n\nHW7\n\n\n\n\n\n\n\n\n\n\n\n교재 챕터8\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
